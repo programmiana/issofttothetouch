@@ -1,5 +1,6 @@
 :root {
   --fluorescentPink: rgb(255, 72, 176);
+  --fluorescentPinkLight: rgb(255, 72, 176, 0.25);
   --green: rgb(0, 169, 92);
   --yellow: rgb(255, 232, 0);
   --orange:rgb(255, 108, 47);
@@ -8,8 +9,6 @@
   --blackLight: rgb(0, 0, 0, 0.10);
   --black: rgb(0, 0, 0);
   --blackMedium: rgb(0, 0, 0, 0.75)
-
-
 }
 
 *::before,
@@ -32,30 +31,33 @@ button {
 }
 
 .primary-button-hover {
-  color: var(--fluorescentPink); /* blue colors for links too */
+  color: var(--fluorescentPink);
   text-decoration: inherit; /* no underline */
-  text-transform: uppercase;
   font-size: 1.5em;
   text-decoration: none;
   font-family: inherit;
-  border: var(--fluorescentPink) 1px solid;
+  transition: 3s ease;
+  /* border: var(--fluorescentPink) 1px solid; */
   padding: 1em;
-  border-radius: 10px;
-  transition: 1.5s ease;
+  /* border-radius: 10px; */
+  /* -moz-box-shadow: 3px 3px 4px rgb(0 0 0 / 20%);
+  -webkit-box-shadow: 0px 1px 1px rgb(0 0 0 / 20%);
+  box-shadow: -1px -1px -1px rgb(0 0 0 / 20%); */
+  margin-right: 2.5em;
+
 }
+
 .primary-button {
-  transition: fadein 1.5s ease;
-  background-color: transparent;
-  color: rgba(0, 0, 0);
-  /* text-shadow:0px 0px 2px #000000; */
-  text-decoration: inherit; /* no underline */
-  text-transform: uppercase;
+  color: var(--fluorescentPinkLight);
+  text-decoration: inherit;
   font-size: 1.5em;
   text-decoration: none;
-  border: black 1px solid;
   font-family: inherit;
+  /* border: var(--fluorescentPink) 1px solid; */
   padding: 1em;
-  border-radius: 10px;
+  border-radius: 2px;
+  transition: 3s ease;
+  margin-right: 2.5em;
 }
 
 a:hover {
@@ -84,12 +86,11 @@ h1 {
   font-size: 8rem;
   transition: all 0.4s;
   position: relative;
-  text-transform: uppercase;
-
+  color: var(--black)
 }
 
 p {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--blackMedium);;
   font-size: 1.3rem;
   line-height: 2em;
 }
@@ -102,12 +103,6 @@ p {
  transform: translate(1000px, -730px);
  width: 40em;
  position: absolute;
-}
-
-.content-text-yellow {
-  background-color: antiquewhite;
-  padding: 4em;
-  text-align: left;
 }
 
 .grid-container {
@@ -298,7 +293,6 @@ p {
   display: inline-block;
     overflow: hidden;
     white-space: nowrap; 
-    text-shadow: 0px 0px 2px #000000
 }
 
 .content-title {
@@ -310,18 +304,12 @@ p {
   color: var(--blackMedium);
 
 }
-.color-title {
-  background-color: cadetblue;
-  margin: 0;
-}
 
 .story {
   grid-area: story;
-  justify-self: center;
+  justify-self: flex-end;
   align-self: start;
-
 }
-
 
 select {
   border: none;
@@ -374,7 +362,6 @@ img {
   max-height: 100%;
   max-width: 100%;
   object-fit: cover;
-  vertical-align: bottom;
 }
 
 .titleFlex {
@@ -398,4 +385,11 @@ img {
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   border: 0;
+}
+
+
+
+/* images */
+.three-women{
+  width: 100vw
 }
