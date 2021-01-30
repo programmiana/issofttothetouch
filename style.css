@@ -67,15 +67,25 @@ a:hover {
 a {
   text-decoration: none;
 }
-
-body {
-  font-family: "Old Standard TT";
-  text-align: center;
+.background-img{
   background-image: url("assets/images/background.jpg");
   background-color: #f4f4f3;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Old Standard TT";
+  text-align: center;
+  /* background-image: url("assets/images/background.jpg");
+  background-color: #f4f4f3;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 .content-page{
   background-color: var(--blackLight);
@@ -163,6 +173,40 @@ p {
   -ms-animation: fadeInSlower ease 8s;
 }
 
+.fade-in-slowest{
+  animation: fadeInSlowest  2s;
+  -webkit-animation: fadeInSlowest  2s;
+  -moz-animation: fadeInSlowest  2s;
+  -o-animation: fadeInSlowest  2s;
+  -ms-animation: fadeInSlowest  2s;
+}
+
+@keyframes fadeInSlowest {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeInSlowest {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeInSlowest {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
 @keyframes fadeIn {
   0% {
@@ -330,7 +374,6 @@ select {
 .flexbox {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
 }
 
 /* top navigation flex */
@@ -358,10 +401,9 @@ select {
 .mini-flexbox .icon-on-hover {
   transform: scale (1.1) translate(86px, -100px);
 }
-img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: cover;
+.three-women {
+  width: 100%;
+  height: 100%;
 }
 
 .titleFlex {
@@ -387,9 +429,3 @@ img {
   border: 0;
 }
 
-
-
-/* images */
-.three-women{
-  width: 100vw
-}

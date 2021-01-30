@@ -5,6 +5,8 @@ const menuButton = document.querySelector(".menu-btn");
 const icon = document.querySelector(".icon");
 // const iconOnHover = document.querySelector(".icon-on-hover");
 const title = document.getElementsByTagName("span");
+const backgroundContainer = document.querySelector(".background-container");
+
 const buttonContainer = document.querySelector(".story");
 const backLink = document.querySelector(".back-link");
 // const bigVagina = document.querySelector(".big-vagina");
@@ -20,7 +22,7 @@ function createMenu(arr) {
   const menuContent = createMenuContent(arr);
   menuList.appendChild(ul);
   ul.innerHTML = menuContent;
-  const dropdownItems = document.querySelectorAll(".dropdown-item");
+
 
   menuList.addEventListener("mouseenter", handleMenuItemHover)
 }
@@ -76,6 +78,7 @@ function handleMainPageLoad() {
   if (window.location.href === "http://127.0.0.1:5502/index.html") {
     const titleArr = Array.from(title);
 
+    backgroundContainer.classList.add('background-img', 'fade-in-slowest');
     // make this a promise ?
     animateTitle(titleArr);
 
